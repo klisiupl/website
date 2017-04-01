@@ -72,3 +72,18 @@ if (showShapes) {
   //   }
   // })
 }
+
+{
+  const btn = document.querySelector('.js-menu-btn')
+  const menu = document.querySelector('.js-menu')
+
+  btn.addEventListener('click', function () {
+      this.classList.toggle('is-open')
+  })
+
+  document.addEventListener('click', function (e) {
+      if (!menu.contains(e.target) && !btn.isSameNode(e.target)) {
+          btn.classList.remove('is-open')
+      }
+  })
+}

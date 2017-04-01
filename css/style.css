@@ -172,7 +172,7 @@ body {
   top: -300%;
 }
 
-.c-nav__btn:focus span::before {
+.c-nav__btn.is-open span::before {
   transform: translateY(-3px);
 }
 
@@ -180,11 +180,11 @@ body {
   top: 300%;
 }
 
-.c-nav__btn:focus span::after {
+.c-nav__btn.is-open span::after {
   transform: translateY(3px);
 }
 
-.c-nav__btn:focus + .c-nav__list {
+.c-nav__btn.is-open + .c-nav__list {
   transform: none;
   visibility: visible;
   opacity: 1;
