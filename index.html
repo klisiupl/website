@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klisiu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marck+Script|Open+Sans:400,700,800&amp;subset=latin-ext">
+</head>
+<body>
+  <div class="o-site js-site">
+    <div class="c-bg js-bg">
+      <svg viewBox="377 -478 1366 1749" preserveAspectRatio="xMidYMin">
+        <filter id="drop-shadow">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="40"/>
+          <feOffset dx="0" dy="0" result="offsetblur"/>
+          <feFlood flood-color="rgba(0, 0, 0, 0.17)"/>
+          <feComposite in2="offsetblur" operator="in"/>
+          <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <polygon fill="#fff" filter="url(#drop-shadow)" points="-1074.5,305.9 1069.1,77.5 1495.5,383.1 -1074.5,1639.2"/>
+        <polygon fill="#fff" filter="url(#drop-shadow)" points="377,-478 3389.4,-478 3389.4,1746.2 377.2,-419.6"/>
+      </svg>
+      <svg viewBox="377 -478 1366 1749" preserveAspectRatio="xMidYMin">
+        <defs>
+          <clipPath id="img-clip">
+            <polygon class="red01" points="3389.4,-478 3389.4,-169.8 1069.1,77.5 -1074.5,305.9 -1074.5,-478 "/>
+          </clipPath>
+        </defs>
+        <polygon fill="#eee" class="red01" points="3389.4,-478 3389.4,-169.8 1069.1,77.5 -1074.5,305.9 -1074.5,-478 "/>
+        <image id="img" xlink:href="http://unsplash.it/1366/768?random=1" x="377" y="-478"
+              height="768" width="1366" clip-path="url(#img-clip)" />
+        <polygon id="red02" fill="#F94237" opacity="0" points="1743,-478 1070.3,-387 -1074.5,465 -1074.5,-478"/>
+      </svg>
+    </div>
+    <nav class="c-nav o-container">
+      <a href="#" class="c-nav__logo">
+        <img src="images/logo.jpg" alt="Logo">
+      </a>
+      <button class="c-nav__btn">
+        <span></span>
+      </button>
+      <ul class="c-nav__list">
+        <li><a href="#" class="is-active">Start</a></li>
+        <li><a href="#">Oferta</a></li>
+        <li><a href="#">O nas</a></li>
+        <li><a href="#">Flota</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <header class="c-header">
+      <div class="c-header__content o-container">
+        <h1 class="c-header__title">
+          TRANSPORT<br>
+          LOKALNY, KRAJOWY<br>
+          I&nbsp;MIĘDZYNARODOWY.
+        </h1>
+        <p class="c-header__subtitle">
+          Nowoczesna flota ośmiu busów.<br>
+          Doświadczeni, solidni kierowcy.
+        </p>
+      </div>
+    </header>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
