@@ -1,0 +1,25 @@
+.c-bg {
+  display: none;
+  width: 100%;
+  height: 1749px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .c-bg {
+    display: block;
+  }
+}
+
+.c-bg svg {
+  min-width: 1366px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}

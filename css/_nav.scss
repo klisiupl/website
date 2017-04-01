@@ -1,0 +1,69 @@
+.c-navbar__btn.is-open + .c-nav {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c-nav {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + var(--space));
+  right: 0;
+  padding: var(--space) 0;
+  color: white;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: right top;
+  transform: translateY(calc(var(--space) * -3)) scale(.5, .15);
+  transition: .3s cubic-bezier(.5, .5, .1, 1.4);
+}
+
+@media (min-width: 700px) {
+  .c-nav {
+    display: flex;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.c-nav li {
+  display: flex;
+}
+
+.c-nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--space) calc(var(--space) * 2);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bbb;
+  transition-duration: .15s;
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  .c-nav a {
+    padding: 0 15px;
+  }
+  .c-nav {
+    margin-right: -15px;
+  }
+}
+
+.c-nav a:hover {
+  color: #666;
+}
+
+.c-nav a:focus,
+.c-nav a.is-active {
+  color: var(--primary)
+}

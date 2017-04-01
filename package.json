@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "node-sass css/index.scss style.css"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.2"
+  }
+}

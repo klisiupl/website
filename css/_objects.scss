@@ -1,0 +1,27 @@
+@media (min-width: 900px) {
+  .o-site {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.o-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: var(--column-padding);
+  padding-left: var(--column-padding);
+  border-right-width: var(--space);
+  border-left-width:  var(--space);
+  border-style: solid;
+  border-color: transparent;
+}
+
+/*.o-container + .o-container:not(.--independent) {
+  padding-top: 0;
+}
+
+.o-container.--independent + .o-container {
+  padding-top: calc(var(--space) * 2);
+}*/

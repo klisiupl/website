@@ -1,0 +1,72 @@
+.c-navbar {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  will-change: transform;
+}
+
+.c-navbar__logo {
+  height: 100%;
+  margin-right: auto;
+}
+
+.c-navbar__logo img {
+  height: 100%;
+  margin-top: -2px;
+  margin-left: -24px;
+}
+
+.c-navbar__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 700px) {
+  .c-navbar__btn {
+    display: none;
+  }
+}
+
+.c-navbar__btn span {
+  width: 36px;
+  height: 3px;
+  position: relative;
+  background-color: #bbb;
+}
+
+.c-navbar__btn span::before,
+.c-navbar__btn span::after {
+  content: '';
+  display: block;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: .3s cubic-bezier(.5, .5, .05, 1.9);
+}
+
+.c-navbar__btn span::before {
+  top: -300%;
+}
+
+.c-navbar__btn.is-open span::before {
+  transform: translateY(-3px);
+}
+
+.c-navbar__btn span::after {
+  top: 300%;
+}
+
+.c-navbar__btn.is-open span::after {
+  transform: translateY(3px);
+}
