@@ -82,7 +82,7 @@ if (showShapes) {
   })
 
   document.addEventListener('click', function (e) {
-      if (!menu.contains(e.target) && !btn.isSameNode(e.target)) {
+      if (!btn.isEqualNode(e.target)) {
           btn.classList.remove('is-open')
       }
   })
