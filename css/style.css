@@ -277,6 +277,7 @@ body {
   width: 100%;
   position: absolute;
   top: 91%;
+  left: 0;
   margin-bottom: -10vh;
   background-color: white;
   transform: skewY(-5deg);
