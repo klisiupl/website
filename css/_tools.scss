@@ -1,0 +1,20 @@
+@function rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+
+@function em($px, $base: 16px) {
+  @return ($px / $base) * 1em;
+}
+
+@mixin min($px) {
+  @media (min-width: em($px)) {
+    @content;
+  }
+}
+
+$space: rem(20px);
+$base-width: rem(1200px);
+$navbar-height: rem(70px);
+$column-padding: calc((100% - #{$base-width} - #{$space} * 2) / 2);
+$border-radius: 10px;
+$primary: #F43D33;

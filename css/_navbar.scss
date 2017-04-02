@@ -1,7 +1,6 @@
 .c-navbar {
   display: flex;
-  width: 100%;
-  height: 70px;
+  height: $navbar-height;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -18,8 +17,8 @@
 
 .c-navbar__logo img {
   height: 100%;
-  margin-top: -2px;
-  margin-left: -24px;
+  margin-top: rem(-2px);
+  margin-left: rem(-24px);
 }
 
 .c-navbar__btn {
@@ -28,45 +27,38 @@
   align-items: center;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-}
 
-@media (min-width: 700px) {
-  .c-navbar__btn {
+  @include min(700px) {
     display: none;
   }
 }
 
 .c-navbar__btn span {
-  width: 36px;
-  height: 3px;
+  width: rem(36px);
+  height: rem(3px);
   position: relative;
   margin-left: auto;
   background-color: #bbb;
-}
 
-.c-navbar__btn span::before,
-.c-navbar__btn span::after {
-  content: '';
-  display: block;
-  background-color: inherit;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: .3s cubic-bezier(.5, .5, .05, 1.9);
-}
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .3s cubic-bezier(.5, .5, .05, 1.9);
+  }
 
-.c-navbar__btn span::before {
-  top: -300%;
+  &::before { top: -300%; }
+  &::after  { top:  300%; }
 }
 
 .c-navbar__btn.is-open span::before {
-  transform: translateY(-3px);
-}
-
-.c-navbar__btn span::after {
-  top: 300%;
+  transform: translateY(rem(-3px));
 }
 
 .c-navbar__btn.is-open span::after {
-  transform: translateY(3px);
+  transform: translateY(rem(3px));
 }

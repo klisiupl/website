@@ -1,21 +1,19 @@
 .c-bg {
   display: none;
   width: 100%;
-  height: 1749px;
+  height: 1749px; // Leave in pixels
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
-}
 
-@media (min-width: 900px) {
-  .c-bg {
+  @include min(900px) {
     display: block;
   }
 }
 
 .c-bg svg {
-  min-width: 1366px;
+  min-width: 1366px; // Leave in pixels
   width: 100%;
   height: 100%;
   position: absolute;
