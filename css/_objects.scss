@@ -18,6 +18,14 @@
   border-color: transparent;
 }
 
+.o-container.--vertical {
+  padding-top: rem(50px);
+
+  @include min(700px) {
+    padding-top: rem(90px);
+  }
+}
+
 // .o-container + .o-container:not(.--independent) {
 //   padding-top: 0;
 // }

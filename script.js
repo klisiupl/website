@@ -28,6 +28,7 @@ if (showShapes) {
   
   const red01 = document.querySelectorAll('.red01')
   const red02 = document.querySelector('#red02')
+  const contactItems = document.querySelectorAll('.js-contact-card .c-contact-item')
 
   const tl = new TimelineLite({ paused: true })
 
@@ -43,6 +44,11 @@ if (showShapes) {
     attr: { points: "1743,-478 1536.3,-99.4 -1074.5,465 -1074.5,-478" },
     opacity: .86
   }, 0)
+
+  tl.staggerFrom(contactItems, 1.5, {
+    y: 100,
+    opacity: 0
+  }, .5, 0)
 
 
   // Handle scroll
@@ -72,6 +78,9 @@ if (showShapes) {
   //   }
   // })
 }
+
+
+// Hamburger btn
 
 {
   const btn = document.querySelector('.js-menu-btn')

@@ -3,6 +3,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+main {
+  position: relative;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -11,6 +15,7 @@ a {
 button {
   padding: 0;
   border: none;
+  outline: none;
   background: none;
   cursor: pointer;
 }

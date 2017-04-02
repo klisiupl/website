@@ -29,9 +29,15 @@
 }
 
 .c-header__content {
+  position: relative;
   padding-top: rem(100px);
   padding-bottom: rem(100px);
+  text-align: center;
   color: #fff;
+
+  @include min(500px) {
+    text-align: left;
+  }
 }
 
 .c-header__content br {
@@ -43,7 +49,6 @@
 }
 
 .c-header__title {
-  margin-bottom: rem(25px);
   font-weight: 900;
   font-size: rem(24px);
   line-height: 1.1;
@@ -61,14 +66,24 @@
 .c-header__subtitle {
   font-size: rem(18px);
   line-height: 1.5;
-  opacity: .8;
 
   @include min(500px) {
     font-size: rem(20px);
   }
 }
 
+$header-item-shadow: 0 2px 30px rgba(0, 0, 0, .2);
+
 .c-header__title,
 .c-header__subtitle {
-  text-shadow: 0 2px 30px rgba(0, 0, 0, .2);
+  margin-bottom: rem(25px);
+  text-shadow: $header-item-shadow;
+}
+
+.c-header__btn {
+  box-shadow: $header-item-shadow;
+
+  @include min(900px) {
+    display: none !important;
+  }
 }
