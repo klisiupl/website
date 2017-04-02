@@ -5,6 +5,8 @@
 }
 
 .c-nav {
+  box-sizing: border-box;
+  max-height: calc(100vh - 70px - var(--space) * 2);
   position: absolute;
   z-index: 1;
   top: calc(100% + var(--space));
@@ -19,6 +21,7 @@
   transform-origin: right top;
   transform: translateY(calc(var(--space) * -3)) scale(.5, .15);
   transition: .3s cubic-bezier(.5, .5, .1, 1.4);
+  overflow-y: auto;
 }
 
 @media (min-width: 700px) {

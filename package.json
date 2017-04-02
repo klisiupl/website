@@ -1,8 +1,14 @@
 {
   "scripts": {
-    "build": "node-sass css/index.scss style.css"
+    "start": "npm run build && npm run sass:watch",
+    "build": "npm run sass:build && npm run autoprefixer",
+    "autoprefixer": "postcss style.css --use autoprefixer --replace",
+    "sass:watch": "node-sass css/index.scss style.css --watch",
+    "sass:build": "node-sass css/index.scss style.css"
   },
   "devDependencies": {
-    "node-sass": "^4.5.2"
+    "autoprefixer": "^6.7.7",
+    "node-sass": "^4.5.2",
+    "postcss-cli": "^3.0.0"
   }
 }
