@@ -1,0 +1,33 @@
+.t-typo {
+  font-size: rem(16px);
+}
+
+.t-typo.--small {
+  font-size: rem(13px);
+}
+
+.t-typo.--right {
+  @include min(900px) {
+    text-align: right;
+  }
+}
+
+.t-typo h1,
+.t-typo h2 {
+  margin-bottom: em(20px, 32px);
+  font-weight: 800;
+  font-size: em(32px);
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.t-typo h2 {
+  font-size: em(30px);
+}
+
+.t-typo p,
+.t-typo li {
+  font-size: em(18px);
+  line-height: 1.8;
+  color: #888;
+}
