@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "start": "npm run build && npm run sass:watch",
+    "watch": "npm run sass:build && npm run sass:watch",
     "build": "npm run sass:build && npm run autoprefixer",
-    "autoprefixer": "postcss style.css --use autoprefixer --replace",
-    "sass:watch": "node-sass css/index.scss style.css --watch",
-    "sass:build": "node-sass css/index.scss style.css"
+    "autoprefixer": "postcss style.css --use autoprefixer --replace --no-map",
+    "sass:watch": "node-sass css/index.scss style.css --source-map-embed --watch",
+    "sass:build": "node-sass css/index.scss style.css --output-style compressed"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
