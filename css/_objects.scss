@@ -18,11 +18,11 @@
   border-color: transparent;
 }
 
-.o-container.--vertical {
-  padding-top: rem(50px);
+.o-top {
+  padding-top: rem(60px);
 
   @include min(700px) {
-    padding-top: rem(90px);
+    padding-top: rem(120px);
   }
 }
 

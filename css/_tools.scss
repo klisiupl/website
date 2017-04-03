@@ -20,6 +20,12 @@ $z-elements:
   }
 }
 
+@mixin between($min, $max) {
+  @media (min-width: em($min)) and (max-width: em($max)) {
+    @content;
+  }
+}
+
 $space: rem(20px);
 $base-width: rem(1200px);
 $navbar-height: rem(70px);

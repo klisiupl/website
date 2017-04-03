@@ -36,12 +36,10 @@
   grid-gap: rem(80px);
   align-items: center;
   justify-content: center;
-  margin-top: rem(50px);
   text-align: left;
 
   @include min(900px) {
     grid-template-columns: auto auto;
-    margin-top: rem(80px);
   }
 }
 
