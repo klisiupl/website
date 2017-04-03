@@ -6,6 +6,8 @@
   <meta name="description" content="Realizujemy solidne usługi transportowe na terenie Opola, powiatu i województwa opolskiego. Często realizujemy również trasy krajowe i zagraniczne. Twój towar na miejsce przeznaczenia dowieziemy punktualnie, szybko i bezpiecznie.">
   <title>Transport lokalny, krajowy i międzynarodowy - Klisiu Transport</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.1/dist/default-skin/default-skin.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marck+Script|Open+Sans:400,700,800&amp;subset=latin-ext">
 </head>
 <body>
@@ -37,14 +39,14 @@
     </div>
 
     <nav class="c-navbar o-container">
-      <a href="#" class="c-navbar__logo">
+      <a href="#" class="c-navbar__logo js-scroll-to-section">
         <img src="images/logo.jpg" alt="Logo">
       </a>
       <button class="c-navbar__btn js-menu-btn">
         <span></span>
       </button>
-      <ul class="c-nav js-menu">
-        <li><a href="#" class="is-active">Start</a></li>
+      <ul class="c-nav js-scroll-to-section">
+        <li><a href="#">Start</a></li>
         <li><a href="#oferta">Oferta</a></li>
         <li><a href="#o-nas">O nas</a></li>
         <li><a href="#flota">Flota</a></li>
@@ -79,7 +81,7 @@
     </header>
 
     <main>
-      <section class="o-container --vertical t-typo c-section-01">
+      <section id="oferta" class="o-container --vertical t-typo c-section-01">
         <h1>Co wozimy?</h1>
         <p>Wszystko co wg przepisów można przewozić dużymi busami i to co zmieści się do przestrzeni bagażowej naszych busów. Zakupione meble, zaopatrzenie do sklepu, sprzęt AGD, ładunki niestandardowe. Realizujemy transport podczas przeprowadzki dla osób prywatnych oraz dla firm i instytucji.</p>
         <img class="c-section-01__img" src="images/icons.png" alt="Ikony">
@@ -128,9 +130,154 @@
           <p>Na terenie Opola przewozy pojedynczych przedmiotów typu lodówka czy komplet mebli wypoczynkowych realizujemy już od 60 zł. Dokładne ceny ustalamy na bieżąco w zależności od wymaganego przez klienta terminu, czasu realizacji, trasy i innych czynników. Przy umawianiu stałych kontraktów opracowujemy szczegółowe kosztorysy, zawsze jednak wg zasady, im dłuższa współpraca, więcej zleceń i dłuższa trasa, tym atrakcyjniejsze warunki dla klienta. Za zrealizowane usługi wystawiamy faktury Vat.</p>
         </div>
       </section>
+
+      <section id="o-nas" class="o-container --vertical t-typo c-section-04">
+        <div>
+          <div class="c-section-04__img"></div>
+          <!--<img src="images/owner.jpg" alt="Zdjęcie właściciela" class="c-section-04__img">-->
+        </div>
+        <div>
+          <h1>Kim jesteśmy?</h1>
+          <p>Początki działalności firmy sięgają roku 2008. Z początku był to jeden samochód i jeden kierowca. Dzisiaj to zespół ośmiu kierowców, stanowiących zgrany zespół, na którym zawsze można polegać. Lubimy jeździć i lubimy sprawiać zadowolenie naszym klientom. Dlatego dołożyliśmy wszelkich starań, aby poziom naszych usług był jak najwyższy.</p>
+          <p>Do dyspozycji Państwa stawiamy zawsze samochody jak najnowsze, w pełni sprawne i bezpieczne. Usługi realizujemy na czas i zgodnie z zamówieniem. Dzięki temu zawsze możemy liczyć na życzliwość i wdzięczność naszych klientów, co bardzo często owocuje poleceniami naszych usług i kolejnymi zleceniami.<br>
+          Za wszystkie Państwu serdecznie dziękujemy.</p>
+          <span class="c-section-04__cursive">Bartosz Kliś</span>
+        </div>
+      </section>
+
+      <section id="flota" class="o-container --vertical t-typo c-section-05">
+        <h1>Nasza flota</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolores accusantium illum.</p>
+        <div class="c-section-05__gallery js-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=1" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=1" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=2" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=2" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=3" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=3" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=4" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=4" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=5" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=5" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=6" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=6" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=7" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=7" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=8" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=8" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=9" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=9" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=10" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=10" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=11" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=11" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="http://unsplash.it/1200/800?random=12" itemprop="contentUrl" data-size="600x400">
+              <img src="http://unsplash.it/1200/800?random=12" itemprop="thumbnail" alt="" />
+            </a>
+          </figure>
+        </div>
+      </section>
     </main>
   </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+      <!-- Container that holds slides. 
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div> 
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+
+        <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe.min.js"></script>
+  <script src="https://unpkg.com/photoswipe@4.1.1/dist/photoswipe-ui-default.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

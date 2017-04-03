@@ -1,5 +1,6 @@
 .t-typo {
   font-size: rem(16px);
+  color: #888;
 }
 
 .t-typo.--small {
@@ -29,5 +30,9 @@
 .t-typo li {
   font-size: em(18px);
   line-height: 1.8;
-  color: #888;
+}
+
+.t-typo p + p,
+.t-typo p + span {
+  margin-top: rem(25px);
 }
