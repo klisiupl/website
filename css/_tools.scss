@@ -8,7 +8,8 @@
 
 $z-elements:
   contact-card,
-  navbar;
+  navbar,
+  modal;
 
 @function z($element, $elements: $z-elements) {
   @return index($elements, $element);

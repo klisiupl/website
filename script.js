@@ -374,3 +374,28 @@ function initMap() {
     map
   });
 }
+
+
+// Modal
+
+{
+  const modal = document.querySelector('.js-modal')
+
+  ;[].forEach.call(
+    document.querySelectorAll('.js-open-modal'),
+    link => {
+      link.addEventListener('click', function (e) {
+        modal.classList.add('is-open')
+      })
+    }
+  )
+
+  ;[].forEach.call(
+    document.querySelectorAll('.js-close-modal'),
+    link => {
+      link.addEventListener('click', function (e) {
+        modal.classList.remove('is-open')
+      })
+    }
+  )
+}
