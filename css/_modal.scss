@@ -67,7 +67,6 @@
   transform: scale(.8);
   opacity: 0;
   transition: .3s;
-  overflow: hidden;
 
   .is-open & {
     transform: none;
@@ -77,6 +76,5 @@
 
 .c-modal__content iframe {
   width: 100%;
-  min-height: 100%;
-  -webkit-overflow-scrolling: touch;
+  height: 100%;
 }
