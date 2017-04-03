@@ -240,6 +240,8 @@ const initPhotoSwipeFromDOM = function (gallerySelector) {
 
             bgOpacity: .95,
 
+            history: false,
+
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
@@ -312,7 +314,7 @@ const scrollToSection = (
   duration = 600
 ) => {
   const scrollToTop = href === '#'
-  const shift = scrollY < 300 ? 300 : 0
+  const shift = matchMedia('(min-width: 900px)').matches && scrollY < 300 ? 300 : 0
   let position = 0
 
   if (!dontChangeUrl) {
