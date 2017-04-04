@@ -3,14 +3,8 @@
   color: #888;
 }
 
-.t-typo.--small {
+.t-typo.\--small {
   font-size: rem(13px);
-}
-
-.t-typo.--right {
-  @include min(900px) {
-    text-align: right;
-  }
 }
 
 .t-typo h1,
