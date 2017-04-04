@@ -9,7 +9,7 @@
   background-color: #333;
 
   @include min(900px) {
-    min-height: 628px; // Leave in pixels
+    height: 628px; // Leave in pixels
     background: none;
   }
 

@@ -10,12 +10,16 @@
 .o-container {
   box-sizing: border-box;
   width: 100%;
-  padding-right: $column-padding;
-  padding-left: $column-padding;
   border-right-width: $space;
   border-left-width:  $space;
   border-style: solid;
   border-color: transparent;
+
+  // IE allows negative padding...
+  @include min($base-width) {
+    padding-right: $column-padding;
+    padding-left: $column-padding;
+  }
 }
 
 .o-top {

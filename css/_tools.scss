@@ -28,8 +28,8 @@ $z-elements:
 }
 
 $space: rem(20px);
-$base-width: rem(1200px);
+$base-width: 1200px;
 $navbar-height: rem(70px);
-$column-padding: calc((100vw - #{$base-width} - #{$space} * 2) / 2);
+$column-padding: calc((100vw - #{rem($base-width)} - #{$space} * 2) / 2);
 $border-radius: 10px;
 $primary: #F43D33;

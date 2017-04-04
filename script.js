@@ -1,3 +1,5 @@
+const scrollTop = () => window.scrollY || window.pageYOffset
+
 const showShapes = matchMedia('(min-width: 900px)').matches
 
 if (showShapes) {
@@ -56,7 +58,7 @@ if (showShapes) {
   const site = document.querySelector('.js-site')
   // const scrollHandlerAttached = true;
   const handleScroll = () => {
-    const val = Math.min(scrollY / 300, 1)
+    const val = Math.min(scrollTop() / 300, 1)
 
     tl.progress(val)
 
@@ -314,7 +316,7 @@ const scrollToSection = (
   duration = 600
 ) => {
   const scrollToTop = href === '#'
-  const shift = matchMedia('(min-width: 900px)').matches && scrollY < 300 ? 300 : 0
+  const shift = matchMedia('(min-width: 900px)').matches && scrollTop() < 300 ? 300 : 0
   let position = 0
 
   if (!dontChangeUrl) {
@@ -330,13 +332,13 @@ const scrollToSection = (
 
     if (!section) return
 
-    position = section.getBoundingClientRect().top + scrollY - margin + shift
+    position = section.getBoundingClientRect().top + scrollTop() - margin + shift
   }
 
   const start = Date.now()
   const scroll = () => {
     let step = Math.min(1, (Date.now() - start) / duration)
-    let distance = position - scrollY
+    let distance = position - scrollTop()
 
     window.scrollBy(0, Math.round(step * distance))
 

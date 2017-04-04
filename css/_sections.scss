@@ -98,6 +98,7 @@
   box-shadow: 0 10px 55px rgba(0, 0, 0, .1);
 
   @include min(1000px) {
+    flex-basis: 100%; // IE
     flex: 1 calc((100% - 3 * #{rem(30px)}) / 3);
   }
 }

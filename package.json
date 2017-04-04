@@ -1,15 +1,19 @@
 {
   "scripts": {
-    "watch": "npm run sass:build && npm run sass:watch",
-    "build": "npm run sass:build && npm run autoprefixer",
-    "autoprefixer": "postcss style.css --use autoprefixer --replace --no-map",
+    "watch": "npm run css:watch",
+    "build": "npm run css:build && npm run js:build",
+    "css:watch": "npm run sass:build && npm run sass:watch",
+    "css:build": "npm run sass:build && npm run css:autoprefixer",
+    "css:autoprefixer": "postcss style.css --use autoprefixer --replace --no-map",
     "sass:watch": "node-sass css/index.scss style.css --source-map-embed --watch",
-    "sass:build": "node-sass css/index.scss style.css --output-style compressed"
+    "sass:build": "node-sass css/index.scss style.css --output-style compressed",
+    "js:build": "babel script.js --out-file script-compiled.js --presets=es2015"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
     "node-sass": "^4.5.2",
     "postcss-cli": "^3.0.0"
-  },
-  "dependencies": {}
+  }
 }
