@@ -348,7 +348,7 @@ var scrollToSection = function scrollToSection(href) {
 
 function initMap() {
     var bp = matchMedia('(min-width: 900px)').matches;
-    var markerPosition = { lat: 50.66939, lng: 17.9550803 };
+    var markerPosition = { lat: 50.669401, lng: 17.963011 };
     var shiftedPosition = { lat: 50.668404, lng: 17.9534495 };
 
     var map = new google.maps.Map(document.querySelector('.js-map'), {
