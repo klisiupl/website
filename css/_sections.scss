@@ -106,6 +106,7 @@
 .c-section-04 {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   @include min(900px) {
     flex-direction: row;
@@ -113,20 +114,22 @@
 }
 
 .c-section-04__img {
-  min-height: rem(400px); //////////////////////////////////////////
-  flex-basis: rem(400px); //////////////////////////////////////////
+  width: 100%;
   margin-bottom: rem(60px);
   background-color: #eee;
   border-radius: $border-radius * 1.5;
 
   @include min(900px) {
+    width: 28%;
     margin-right: rem(60px);
     margin-bottom: 0;
   }
 }
 
 .c-section-04__text {
-  flex: 1;
+  @include min(900px) {
+    width: 72%;
+  }
 }
 
 .c-section-04__cursive {
