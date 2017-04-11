@@ -8,6 +8,10 @@
   background-size: cover;
   background-color: #333;
 
+  @media (orientation: landscape) {
+    height: auto;
+  }
+
   @include min(900px) {
     height: 628px; // Leave in pixels
     background: none;
