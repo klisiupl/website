@@ -118,7 +118,7 @@
   margin-bottom: rem(60px);
   background-color: #eee;
   border-radius: $border-radius * 1.5;
-  box-shadow: 0 10px 55px rgba(black, .12);
+  box-shadow: 0 10px 55px rgba(#000, .12);
 
   @include min(900px) {
     width: 28%;
@@ -153,4 +153,5 @@
 
 .c-section-05__gallery img {
   max-width: 100%;
+  box-shadow: 0 3px 15px rgba(#000, .15);
 }
