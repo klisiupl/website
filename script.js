@@ -2,6 +2,282 @@ const scrollTop = () => window.scrollY || window.pageYOffset
 
 const showShapes = matchMedia('(min-width: 900px)').matches
 
+
+const aTl = new TimelineMax()
+aTl.repeat(-1)
+
+// aTl.from('#a-animation', 1, {
+//   opacity: 0
+// })
+
+aTl.fromTo('#a-klistof', 1, { x: -50 }, { x: 100 }, '-=.5')
+aTl.fromTo(['#a-klistyna', '#a-cart'], 1, { x: 50 }, { x: -100 }, '-=1')
+
+aTl.to('#a-cart', .3, {
+  transformOrigin: '180 430',
+  rotation: -20
+})
+aTl.fromTo('#a-boxes g:nth-of-type(4)', .5, {
+  x: 50,
+  y: 13
+}, {
+  x: 0,
+  y: 3
+}, '-=.3')
+aTl.fromTo('#a-boxes g:nth-of-type(3)', .5, {
+  x: 12,
+  y: 4
+}, {
+  x: -40,
+  y: -6
+}, '-=.5')
+aTl.fromTo('#a-boxes g:nth-of-type(2)', .5, {
+  x: 30,
+  y: 7
+}, {
+  x: 10,
+  y: 3
+}, '-=.5')
+
+aTl.to('#a-klistyna__arm', .7, {
+  transformOrigin: 'right top',
+  rotation: -25
+}, '-=.5')
+aTl.to('#a-klistyna__forearm', .7, {
+  transformOrigin: '98 19',
+  rotation: -20
+}, '-=.5')
+
+aTl.fromTo('#a-btn', .8, {
+  transformOrigin: 'right',
+  y: 400,
+  x: 70,
+  scaleX: .3,
+  opacity: 0
+}, {
+  y: 0,
+  x: 0,
+  scaleX: 1,
+  opacity: 1,
+  ease: Back.easeOut
+})
+
+aTl.to('#a-klistof__head', .5, {
+  transformOrigin: '42 142',
+  rotation: -25
+}, '-=.5')
+aTl.to('#a-klistof__head', .5, {
+  delay: .5,
+  transformOrigin: '42 142',
+  rotation: 12
+})
+aTl.to('#a-klistof__arm', .5, {
+  transformOrigin: '25 12',
+  rotation: -18
+}, '-=.25')
+aTl.to('#a-klistof__forearm', .5, {
+  transformOrigin: '0 4',
+  rotation: -40
+}, '-=.5')
+
+aTl.staggerFrom('#a-tel path', .5, {
+  transformOrigin: 'center',
+  scale: .3,
+  opacity: 0
+}, .2)
+
+aTl.to('#a-btn', .3, {
+  transformOrigin: 'center',
+  scale: 1.1,
+  ease: Back.easeOut
+})
+aTl.to('#a-btn', .3, {
+  transformOrigin: 'center',
+  scale: 1,
+  ease: Back.easeOut
+})
+
+aTl.to('#a-cart', 1, {
+  opacity: 0
+})
+
+aTl.to('#a-klistof__head', .5, {
+  rotation: 0
+})
+aTl.to('#a-klistof__arm', .5, {
+  rotation: 0
+}, '-=.5')
+aTl.to('#a-klistof__forearm', .5, {
+  rotation: 0
+}, '-=.5')
+
+aTl.to('#a-animation', 1, {
+  delay: 1,
+  opacity: 0
+})
+
+const bTl = new TimelineMax()
+bTl.repeat(-1)
+
+bTl.from('#b-animation', 1, {
+  opacity: 0
+})
+
+bTl.from('#b-tel', 1, {
+  transformOrigin: 'center top',
+  scale: .7,
+  ease: Back.easeOut
+})
+
+bTl.to('#b-website', .8, {
+  y: '-=300',
+  ease: Power2.easeOut
+})
+bTl.to('#b-website', .8, {
+  y: '-=300',
+  ease: Power2.easeOut
+})
+bTl.to('#b-website', .8, {
+  y: '-=300',
+  ease: Power2.easeOut
+})
+
+TweenMax.set('#b-star', {
+  opacity: 0
+})
+bTl.to('#b-star', 0, {
+  opacity: 1
+})
+bTl.to('#b-star', 1, {
+  morphSVG: '#b-car-shape',
+  ease: Back.easeOut
+})
+bTl.from('#b-car', 1, {
+  opacity: 0
+})
+bTl.to('#b-star', 0, {
+  opacity: 0
+})
+bTl.to('#b-car', 1.2, {
+  transformOrigin: 'center bottom',
+  x: 800,
+  scale: .8,
+  ease: Power2.easeIn
+})
+bTl.to('.b-car__wheel', 1.2, {
+  transformOrigin: 'center',
+  rotation: 360,
+  ease: Power2.easeIn
+}, '-=1.2')
+bTl.to('#b-car', .7, {
+  opacity: 0,
+  ease: Power2.easeIn
+}, '-=.7')
+
+bTl.to('#b-animation', 1, {
+  opacity: 0
+})
+
+const cTl = new TimelineMax()
+cTl.repeat(-1)
+
+cTl.from('#c-car', 1, {
+  opacity: 0
+})
+cTl.from('#c-car', 4, {
+  transformOrigin: 'left bottom',
+  x: -1600,
+  scale: .9,
+  ease: Back.easeOut
+}, '-=1')
+cTl.from('.c-car__wheel', 4, {
+  transformOrigin: 'center',
+  rotation: -1000,
+  ease: Back.easeOut
+}, '-=4')
+
+TweenMax.set('#c-cart', {
+  transformOrigin: '48 388',
+  rotation: -13
+})
+cTl.from(['#c-klistof', '#c-cart'], 1, {
+  x: -200,
+  opacity: 0
+}, '-=3')
+
+cTl.to('#c-klistof', 1, {
+  x: 150
+})
+cTl.to('#c-klistof__arm', 1, {
+  rotation: -6
+}, '-=1')
+cTl.to('#c-klistof__forearm', 1, {
+  transformOrigin: '0 21',
+  rotation: -4
+}, '-=1')
+cTl.to('#c-cart', 1, {
+  x: 120,
+  rotation: 0
+}, '-=1')
+
+cTl.to(['#c-cart__handle', '#c-boxes'], 1, {
+  y: -110
+})
+cTl.to(['#c-cart__handle', '#c-boxes'], 1, {
+  x: 100
+})
+cTl.to('#c-cart__handle', 1, {
+  transformOrigin: 'right',
+  scaleX: 1.7
+}, '-=1')
+
+cTl.to(['#c-klistof', '#c-cart'], 1, {
+  x: '+=120'
+}, '-=1')
+
+cTl.to('#c-boxes', 0, {
+  opacity: 0
+})
+cTl.to('#c-cart__handle', 1, {
+  transformOrigin: 'right',
+  x: 0,
+  scaleX: 1
+})
+cTl.to(['#c-klistof', '#c-cart'], 1, {
+  x: '-=120'
+}, '-=1')
+cTl.to('#c-cart__handle', 1, {
+  y: 0
+})
+
+cTl.to('#c-car', .6, {
+  transformOrigin: 'left bottom',
+  x: 800,
+  scale: .9,
+  opacity: 0,
+  ease: Power2.easeIn
+})
+cTl.to('.c-car__wheel', .6, {
+  rotation: 600,
+  ease: Power2.easeIn
+}, '-=.6')
+
+cTl.to('#c-cart', .5, {
+  rotation: 11
+})
+cTl.to('#c-klistof__arm', .5, {
+  rotation: 19
+}, '-=.5')
+cTl.to('#c-klistof__forearm', .5, {
+  transformOrigin: '10 21',
+  rotation: 23
+}, '-=.5')
+
+cTl.to(['#c-klistof', '#c-cart'], 1, {
+  opacity: 0
+}, '+=1')
+
+
 if (showShapes) {
   // Resize image
   const img = document.querySelector('#img')
@@ -27,12 +303,16 @@ if (showShapes) {
 
 
   // Animation
+
+  aTl.pause()
   
   const red01 = document.querySelectorAll('.red01')
   const red02 = document.querySelector('#red02')
-  const contactItems = document.querySelectorAll('.js-contact-card .c-contact-item')
+  const contactCard = document.querySelector('.js-contact-card')
 
-  const tl = new TimelineLite({ paused: true })
+  const tl = new TimelineLite({
+    paused: true
+  })
 
   tl.to(red01, .05, { fill: '#DA251B' }, 0)
 
@@ -44,13 +324,20 @@ if (showShapes) {
 
   tl.to(red02, 1.5, {
     attr: { points: "1743,-478 1536.3,-99.4 -1074.5,465 -1074.5,-478" },
-    opacity: .86
+    opacity: .86,
+    onStart() {
+      aTl.pause()
+      aTl.time(0)
+    }
   }, 0)
 
-  tl.staggerFrom(contactItems, 1.5, {
-    y: 100,
-    opacity: 0
-  }, .5, 0)
+  tl.from(contactCard, 1.5, {
+    scale: .75,
+    opacity: 0,
+    onComplete() {
+      aTl.play()
+    }
+  })
 
 
   // Handle scroll

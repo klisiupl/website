@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   z-index: z(contact-card);
-  top: calc(100% - #{rem(90px)});
+  top: calc(100% - #{rem(110px)});
   right: 0;
   padding-right: $column-padding;
   text-align: right;
@@ -10,4 +10,10 @@
   @include min(1220px) {
     display: block;
   }
+}
+
+.c-contact-card__animation {
+  width: rem(390px);
+  position: relative;
+  right: rem(-50px);
 }

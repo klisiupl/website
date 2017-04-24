@@ -5,6 +5,16 @@
   }
 }
 
+.c-section-01__animation {
+  display: block;
+  margin-top: rem(-60px);
+  margin-bottom: rem(40px);
+
+  @include min(900px) {
+    display: none;
+  }
+}
+
 .c-section-01__img {
   display: block;
   margin-top: em(40px);
@@ -21,6 +31,18 @@
   @include min(1000px) { margin-top: em( -50px); }
   @include min(1100px) { margin-top: em(-100px); }
   @include min(1200px) { margin-top: em(-200px); }
+}
+
+.c-section-02__animation {
+  display: block;
+  margin-top: rem(50px);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include min(900px) {
+    max-width: 65%;
+    margin-bottom: rem(-40px);
+  }
 }
 
 .c-section-02__text {
@@ -110,6 +132,18 @@
 
   @include min(900px) {
     flex-direction: row;
+  }
+}
+
+.c-section-04__animation {
+  display: block;
+  margin-top: rem(50px);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include min(900px) {
+    max-width: 70%;
+    margin-bottom: rem(-40px);
   }
 }
 
