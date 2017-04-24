@@ -151,9 +151,9 @@ TweenMax.set('#b-star', {
 bTl.to('#b-star', 0, {
   opacity: 1
 });
-bTl.to('#b-star', 1, {
+bTl.to('#b-star', 2.2, {
   morphSVG: '#b-car-shape',
-  ease: Back.easeOut
+  ease: Power4.easeInOut
 });
 bTl.from('#b-car', 1, {
   opacity: 0
@@ -164,7 +164,7 @@ bTl.to('#b-star', 0, {
 bTl.to('#b-car', 1.2, {
   transformOrigin: 'center bottom',
   x: 800,
-  scale: .8,
+  scale: .9,
   ease: Power2.easeIn
 });
 bTl.to('.b-car__wheel', 1.2, {
